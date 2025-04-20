@@ -1,14 +1,10 @@
 const sound = new Howl({
-    src: ['assets/audio/background.mp3'],
-    loop: true,
+    src: ['assets/audio/ambient.mp3'],
     volume: 0.3,
+    loop: true
   });
   
-  document.getElementById('toggle-audio').addEventListener('click', () => {
-    if (sound.playing()) {
-      sound.pause();
-    } else {
-      sound.play();
-    }
+  window.addEventListener('load', () => {
+    sound.play();
   });
   
