@@ -150,26 +150,38 @@
   </script>
 
 <script>
-    fetch('https://script.google.com/macros/s/AKfycbwG7ePRyWMjtTwbvhl3-WrmxZI8XvPWofTN80fIZLn5EtPj67EGbUIo9H-DpzJbU2S7AA/exec') // Replace with your deployed script URL
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById('testimonial-list');
-        container.innerHTML = ''; // clear loading message
+    window.onload = function() {
+      const testimonialsContainer = document.getElementById('testimonials');
+      let reviews = [];
   
-        data.slice(-5).reverse().forEach(entry => {
-          const testimonial = document.createElement('div');
-          testimonial.classList.add('testimonial');
-          testimonial.innerHTML = `
-            <p>"${entry.Review}"</p>
-            <strong>- ${entry.Name}</strong>
-          `;
-          container.appendChild(testimonial);
-        });
-      })
-      .catch(err => {
-        document.getElementById('testimonial-list').innerText = 'Failed to load testimonials.';
-        console.error(err);
-      });
+      // Fetch the reviews from the Google Apps Script web app
+      fetch('https://script.google.com/macros/s/AKfycbz36BLX6kK2ZAVSgINP1mhTa16c-WHkLR3CmM_eMYtXl3svAky4vCa65fUkDlH1m-Ne5w/exec')  // Replace with your actual Web App URL
+        .then(response => response.json())
+        .then(data => {
+          reviews = data;  // Store the fetched reviews in the reviews array
+          showReview();    // Show the first review when the page loads
+        })
+        .catch(error => console.error('Error fetching data:', error));
+  
+      let currentReviewIndex = 0;
+  
+      // Function to display a new review every 5 seconds
+      function showReview() {
+        if (reviews.length === 0) return;  // If no reviews are available, stop
+  
+        const review = reviews[currentReviewIndex];
+        const reviewElement = document.createElement('p');
+        reviewElement.textContent = `"${review.review}" - ${review.name}`;
+        testimonialsContainer.innerHTML = '';  // Clear previous review
+        testimonialsContainer.appendChild(reviewElement);
+  
+        // Update the index to show the next review
+        currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+  
+        // Set the next review after 5 seconds
+        setTimeout(showReview, 5000);
+      }
+    };
   </script>
   
 
