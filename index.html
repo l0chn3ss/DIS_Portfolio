@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>portfolio</title>
-  <!-- Importing Fonts -->
+  <title>Anvesha Jain | Portfolio</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style/main.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Didot&family=Helvetica&display=swap" />
 </head>
 
 <body class="dark-theme">
@@ -22,7 +22,7 @@
   <!-- Hero Section -->
   <header class="hero">
     <div class="bg-animation"></div>
-    <h1 class="animated-title">Anvesha Jain</h1> 
+    <h1 class="animated-title">Anvesha Jain</h1>
     <p class="animated-subtitle">Designer & Developer</p>
     <div class="scroll-indicator">↓</div>
   </header>
@@ -33,43 +33,43 @@
     <p>Hello there. (General Kenobi) :p I’m a passionate designer and developer who loves crafting meaningful user experiences and beautiful interfaces. Whether it's a visual story or a technical challenge, I enjoy blending creativity with code.</p>
   </section>
 
-<!-- Projects Section -->
-<section id="projects" class="projects">
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
     <h2>Projects</h2>
-  
-    <div class="project-card tilt" data-tilt-scale="1.05" data-tilt-glare="true" data-tilt-max-glare="0.5">
-      <img src="assets/images/dpp_proj.png" alt="Canteen Workflow Redesign" />
-      <div class="overlay"></div>
-      <h3>DPP Canteen Workflow Redesign</h3>
-    </div>
-  
+
+    <a href="https://drive.google.com/file/d/1ccWwu7EgBTYACALuUeFdtbsVM3JiQxj_/view?usp=sharing" target="_blank" class="project-link">
+        <div class="project-card tilt" data-tilt-scale="1.05" data-tilt-glare="true" data-tilt-max-glare="0.5">
+          <img src="assets/images/dpp_proj.png" alt="Canteen Workflow Redesign" />
+          <div class="overlay"></div>
+          <h3>DPP Canteen Workflow Redesign</h3>
+        </div>
+    </a>
+
     <div class="project-card tilt" data-tilt-scale="1.05" data-tilt-glare="true" data-tilt-max-glare="0.5">
       <img src="assets/images/dreamor.png" alt="Dreamor Design" />
       <div class="overlay"></div>
       <h3>Dreamor - AI Powered Fashion App Design</h3>
     </div>
-  
-    <div class="project-card tilt" data-tilt-scale="1.05" data-tilt-glare="true" data-tilt-max-glare="0.5">
-      <img src="assets/images/liliver.png" alt="The Liliver Co." />
-      <div class="overlay"></div>
-      <h3>The Liliver Co. Print Media</h3>
-    </div>
-  </section>
-  
 
-    <!-- Add more project cards as needed -->
+    <a href="https://www.instagram.com/theliliverco?igsh=MWY4eGtvd3BoazNwZA%3D%3D&utm_source=qr" target="_blank" class="project-link">
+        <div class="project-card tilt" data-tilt-scale="1.05" data-tilt-glare="true" data-tilt-max-glare="0.5">
+          <img src="assets/images/liliver.png" alt="The Liliver Co." />
+          <div class="overlay"></div>
+          <h3>The Liliver Co. Print Media</h3>
+        </div>
+      </a>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <h2>Contact Me</h2>
     <p>If you're interested in collaborating or just want to say hi, feel free to reach out!</p>
-    <p>Contact Number: + 91 12345 67890</p>
-    <a href="https://www.linkedin.com/in/anvesha-jain" target="_blank" class="contact-button" style="background-color: #0A66C2; color: #fff;">Connect on LinkedIn 💼</a>
+    <p>Contact Number: +91 12345 67890</p>
+    <a href="https://www.linkedin.com/in/anvesha-jain" target="_blank" class="contact-button">Connect on LinkedIn</a>
     <a href="mailto:anveshajain2003@gmail.com" class="contact-button">Email Me</a>
   </section>
 
-  <!-- Testimonials (optional from spreadsheet) -->
+  <!-- Testimonials (from Google Sheets) -->
   <div id="testimonials"></div>
 
   <!-- Assistant Avatar -->
@@ -78,7 +78,7 @@
     <div id="assistant-bubble">Hello there.</div>
   </div>
 
-  <!-- Libraries and Scripts -->
+  <!-- Libraries -->
   <script src="libs/gsap.min.js"></script>
   <script src="libs/howler.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
@@ -87,7 +87,7 @@
   <script src="js/scroll.js"></script>
   <script src="js/app.js"></script>
 
-  <!-- Assistant greeting logic -->
+  <!-- Assistant Greeting Logic -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       const hour = new Date().getHours();
@@ -95,7 +95,6 @@
       const avatar = document.getElementById('avatar');
 
       let greeting = "Welcome to my portfolio";
-
       if (hour < 12) greeting = "Good morning! ☀️";
       else if (hour < 18) greeting = "Good afternoon! 🌤️";
       else greeting = "Good evening! 🌙";
@@ -108,7 +107,7 @@
           "Want to check out my projects?",
           "Scroll down to explore more",
           "Let me know what you think",
-          "Click on project tile!"
+          "Click on a project tile!"
         ];
         const response = responses[Math.floor(Math.random() * responses.length)];
         bubble.textContent = response;
@@ -121,13 +120,12 @@
   <script>
     window.onload = function () {
       const sheetID = '1n4_xCODDa-9p71ZSiqt3xAvOADFeShvMjQDLKh60TEc';
-      const url = `https://spreadsheets.google.com/feeds/list/1n4_xCODDa-9p71ZSiqt3xAvOADFeShvMjQDLKh60TEc/od6/public/values?alt=json`;
+      const url = `https://spreadsheets.google.com/feeds/list/${sheetID}/od6/public/values?alt=json`;
 
       fetch(url)
         .then(response => response.json())
         .then(data => {
           const testimonialsContainer = document.getElementById('testimonials');
-
           data.feed.entry.forEach(entry => {
             const p = document.createElement('p');
             p.textContent = `"${entry.gsx$review.$t}" - ${entry.gsx$name.$t}`;
@@ -135,34 +133,28 @@
           });
         })
         .catch(error => {
-          console.error('Error fetching data:', error);
+          console.error('Error fetching testimonials:', error);
         });
     };
   </script>
 
-<script>
-    // Load the sound from the correct path
-    const hoverSound = new Audio('assets/audio/fire.mp3');
-  
-    // Select all project cards
-    const projectCards = document.querySelectorAll('.project-card');
-  
-    // Add event listener for hover effect
-    projectCards.forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        hoverSound.play();
-      });
-    });
-  
-    // Optional: Pause the sound if mouse leaves the project card
-    projectCards.forEach(card => {
-      card.addEventListener('mouseleave', () => {
-        hoverSound.pause();
-        hoverSound.currentTime = 0;  // Reset sound to start position
+  <!-- Hover Sound Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hoverSound = new Audio('assets/audio/fire.mp3');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      projectCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          hoverSound.play();
+        });
+        card.addEventListener('mouseleave', () => {
+          hoverSound.pause();
+          hoverSound.currentTime = 0;
+        });
       });
     });
   </script>
-  
 
 </body>
 

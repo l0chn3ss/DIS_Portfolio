@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Didot&family=Helvetica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didot&family=Roboto&display=swap');
 
 /* General Styling */
 body.dark-theme {
   margin: 0;
   background: #0f0f0f;
   color: #f0f0f0;
-  font-family: 'Helvetica', sans-serif; /* Helvetica for content */
+  font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -25,14 +25,14 @@ body.dark-theme {
 .hero h1 {
   font-size: 6vw;
   font-weight: bold;
-  font-family: 'Didot', serif; /* Didot for headings */
+  font-family: 'Didot', serif;
 }
 
 .hero p {
   font-size: 1.5rem;
   margin-top: 1rem;
   opacity: 0.7;
-  font-family: 'Helvetica', sans-serif; /* Helvetica for content */
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Blurred Blob Animation */
@@ -50,7 +50,6 @@ body.dark-theme {
   pointer-events: none;
 }
 
-/* Blob animation to move and react to cursor */
 @keyframes blobMovement {
   0% { transform: translate(0, 0); }
   50% { transform: translate(20%, 10%) scale(1.05); }
@@ -78,17 +77,16 @@ body.dark-theme {
   margin-top: 0.5rem;
   opacity: 0;
   animation: fadeInUp 1.5s ease-out forwards;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .scroll-indicator {
   margin-top: 4rem;
   font-size: 2rem;
   animation: bounce 1.5s infinite;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* Keyframes */
 @keyframes fadeInUp {
   0% { transform: translateY(20px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
@@ -98,6 +96,7 @@ body.dark-theme {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
 }
+
 /* Projects Section */
 .projects {
   display: grid;
@@ -107,9 +106,9 @@ body.dark-theme {
 }
 
 .projects-heading {
-  font-family: 'Didot', serif; /* Heading font */
+  font-family: 'Didot', serif;
   font-size: 2.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
   text-align: center;
   color: #f0f0f0;
   text-transform: uppercase;
@@ -136,6 +135,7 @@ body.dark-theme {
   perspective: 1000px;
   transform-style: preserve-3d;
   will-change: transform;
+  background-color: #000;
 }
 
 .project-card img {
@@ -171,9 +171,8 @@ body.dark-theme {
   font-size: 1.2rem;
   font-weight: 700;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
-  font-family: 'Didot', serif; /* Heading font */
+  font-family: 'Didot', serif;
 }
-
 
 /* Assistant Avatar */
 #assistant-container {
@@ -223,11 +222,11 @@ body.dark-theme {
   padding: 1rem;
   color: #f0f0f0;
   font-style: italic;
-  background: #333;
+  background: #000;
 }
 
 #testimonials p {
-  background: #a46b6b;
+  background: #111;
   padding: 1rem;
   margin-bottom: 1rem;
   border-left: 5px solid #4fc3f7;
@@ -243,7 +242,7 @@ body.dark-theme {
   justify-content: center;
   align-items: center;
   padding: 5rem 2rem;
-  background-color: #111;
+  background-color: #000;
   color: #fff;
   text-align: center;
 }
@@ -262,7 +261,7 @@ body.dark-theme {
   line-height: 1.8;
   margin-bottom: 2rem;
   color: #e0e0e0;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .contact-button {
@@ -270,7 +269,7 @@ body.dark-theme {
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
   background-color: #7282a4;
-  color: #000;
+  color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
