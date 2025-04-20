@@ -198,6 +198,13 @@ body.dark-theme {
     z-index: 1000;
   }
   
+  #assistant-container img {
+    width: 100px;
+    height: auto;
+    display: block;
+  }
+  
+
   #avatar {
     width: 100px;
     height: auto;
@@ -225,5 +232,21 @@ body.dark-theme {
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+  
+  #testimonials {
+    margin: 4rem auto;
+    max-width: 600px;
+    padding: 1rem;
+    color: #f0f0f0;
+    font-style: italic;
+  }
+  
+  #testimonials p {
+    background: #1f1f1f;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #4fc3f7;
+    border-radius: 8px;
   }
   
