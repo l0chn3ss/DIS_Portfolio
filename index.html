@@ -30,12 +30,12 @@
   <!-- About Section -->
   <section id="about" class="about-section">
     <h2>About</h2>
-    <p>Hello there. (General Kenobi):p I’m a passionate designer and developer who loves crafting meaningful user experiences and beautiful interfaces. Whether it's a visual story or a technical challenge, I enjoy blending creativity with code.</p>
+    <p>Hello there. (General Kenobi) :p I’m a passionate designer and developer who loves crafting meaningful user experiences and beautiful interfaces. Whether it's a visual story or a technical challenge, I enjoy blending creativity with code.</p>
   </section>
 
 <!-- Projects Section -->
 <section id="projects" class="projects">
-    <h2 class="projects-heading">My Projects</h2>
+    <h2 class="projects-heading">Projects</h2>
   
     <div class="project-card tilt" data-tilt-scale="1.05" data-tilt-glare="true" data-tilt-max-glare="0.5">
       <img src="assets/images/dpp_proj.png" alt="Canteen Workflow Redesign" />
@@ -64,7 +64,9 @@
   <section id="contact" class="contact-section">
     <h2>Contact Me</h2>
     <p>If you're interested in collaborating or just want to say hi, feel free to reach out!</p>
-    <a href="mailto:your.email@example.com" class="contact-button">Say Hello 👋</a>
+    <p>Contact Number: + 91 12345 67890</p>
+    <a href="www.linkedin.com/in/anvesha-jain"></a>
+    <a href="mailto:anveshajain2003@gmail.com" class="contact-button">Email Me</a>
   </section>
 
   <!-- Testimonials (optional from spreadsheet) -->
@@ -73,7 +75,7 @@
   <!-- Assistant Avatar -->
   <div id="assistant-container">
     <img id="avatar" src="assets/avatar/dragon.gif" alt="Virtual Assistant" />
-    <div id="assistant-bubble">Hi there! 👋</div>
+    <div id="assistant-bubble">Hello there.</div>
   </div>
 
   <!-- Libraries and Scripts -->
@@ -92,7 +94,7 @@
       const bubble = document.getElementById('assistant-bubble');
       const avatar = document.getElementById('avatar');
 
-      let greeting = "Welcome to my portfolio!";
+      let greeting = "Welcome to my portfolio";
 
       if (hour < 12) greeting = "Good morning! ☀️";
       else if (hour < 18) greeting = "Good afternoon! 🌤️";
@@ -104,10 +106,9 @@
       avatar.addEventListener('click', () => {
         const responses = [
           "Want to check out my projects?",
-          "Scroll down to explore more!",
-          "Let me know what you think!",
-          "Feeling curious today?",
-          "Hover over a project to see it tilt!"
+          "Scroll down to explore more",
+          "Let me know what you think",
+          "Click on project tile!"
         ];
         const response = responses[Math.floor(Math.random() * responses.length)];
         bubble.textContent = response;
@@ -120,7 +121,7 @@
   <script>
     window.onload = function () {
       const sheetID = '1n4_xCODDa-9p71ZSiqt3xAvOADFeShvMjQDLKh60TEc';
-      const url = `https://spreadsheets.google.com/feeds/list/${sheetID}/od6/public/values?alt=json`;
+      const url = `https://spreadsheets.google.com/feeds/list/1n4_xCODDa-9p71ZSiqt3xAvOADFeShvMjQDLKh60TEc/od6/public/values?alt=json`;
 
       fetch(url)
         .then(response => response.json())
