@@ -81,7 +81,7 @@
       });
     });
 </script>
-
+<!-- 
 <div id="testimonials"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.6.1/tabletop.min.js"></script>
@@ -101,6 +101,31 @@
       },
       simpleSheet: true
     });
+  };
+</script> -->
+
+<div id="testimonials"></div>
+
+<script>
+  window.onload = function () {
+    const sheetID = '1n4_xCODDa-9p71ZSiqt3xAvOADFeShvMjQDLKh60TEc'; // Replace with your sheet ID
+    const url = `https://spreadsheets.google.com/feeds/list/${sheetID}/od6/public/values?alt=json`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const testimonialsContainer = document.getElementById('testimonials');
+        
+        // Loop through each testimonial data and display it
+        data.feed.entry.forEach(entry => {
+          const p = document.createElement('p');
+          p.textContent = `"${entry.gsx$review.$t}" - ${entry.gsx$name.$t}`;
+          testimonialsContainer.appendChild(p);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
   };
 </script>
 
