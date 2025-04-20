@@ -114,6 +114,12 @@ body.dark-theme {
   text-transform: uppercase;
 }
 
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 @media (min-width: 600px) {
   .projects {
     grid-template-columns: repeat(2, 1fr);
@@ -215,24 +221,6 @@ body.dark-theme {
   animation: fadeIn 0.5s ease forwards;
 }
 
-/* Testimonials */
-#testimonials {
-  margin: 4rem auto;
-  max-width: 600px;
-  padding: 1rem;
-  color: #f0f0f0;
-  font-style: italic;
-  background: #000;
-}
-
-#testimonials p {
-  background: #111;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-left: 5px solid #4fc3f7;
-  border-radius: 8px;
-}
-
 /* About + Contact Sections */
 .about-section,
 .contact-section {
@@ -280,6 +268,37 @@ body.dark-theme {
 .contact-button:hover {
   background-color: #7282a4;
   transform: scale(1.05);
+}
+
+.testimonials {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #111;
+  border-radius: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #eee;
+}
+
+.testimonials h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Didot', serif;
+}
+
+.testimonial {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-left: 4px solid #7282a4;
+  background: #1c1c1c;
+  border-radius: 5px;
+}
+
+.testimonial strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: #ccc;
 }
 
 /* Navigation Bar */
