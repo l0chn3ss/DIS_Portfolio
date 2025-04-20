@@ -103,6 +103,7 @@ body.dark-theme {
   grid-template-columns: 1fr;
   gap: 2rem;
   padding: 5vh 5vw;
+  background-color: #000;
 }
 
 .projects-heading {
@@ -111,7 +112,6 @@ body.dark-theme {
   margin-bottom: 1.8rem;
   text-align: center;
   color: #f0f0f0;
-  text-transform: uppercase;
 }
 
 .project-link {
@@ -270,7 +270,7 @@ body.dark-theme {
   transform: scale(1.05);
 }
 
-.testimonials {
+/* .testimonials {
   margin-top: 3rem;
   padding: 2rem;
   background-color: #111;
@@ -299,7 +299,7 @@ body.dark-theme {
   display: block;
   margin-top: 0.5rem;
   color: #ccc;
-}
+} */
 
 #testimonials p {
   font-size: 1.2rem;
