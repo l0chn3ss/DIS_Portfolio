@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didot&family=Maison+Neue&display=swap');
 
 body.dark-theme {
   margin: 0;
   background: #0f0f0f;
   color: #f0f0f0;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Maison Neue', serif; /* Default font for content */
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -23,12 +23,14 @@ body.dark-theme {
 .hero h1 {
   font-size: 6vw;
   font-weight: bold;
+  font-family: 'Didot', serif; /* Heading font */
 }
 
 .hero p {
   font-size: 1.5rem;
   margin-top: 1rem;
   opacity: 0.7;
+  font-family: 'Maison Neue', serif; /* Content font */
 }
 
 .bg-animation {
@@ -59,6 +61,7 @@ body.dark-theme {
   color: white;
   opacity: 0;
   animation: fadeInUp 1.2s ease-out forwards;
+  font-family: 'Didot', serif;
 }
 
 .animated-subtitle {
@@ -67,12 +70,14 @@ body.dark-theme {
   margin-top: 0.5rem;
   opacity: 0;
   animation: fadeInUp 1.5s ease-out forwards;
+  font-family: 'Maison Neue', serif;
 }
 
 .scroll-indicator {
   margin-top: 4rem;
   font-size: 2rem;
   animation: bounce 1.5s infinite;
+  font-family: 'Maison Neue', serif;
 }
 
 /* Keyframes */
@@ -156,6 +161,7 @@ body.dark-theme {
   font-size: 1.2rem;
   font-weight: 700;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+  font-family: 'Didot', serif;
 }
 
 /* Assistant avatar */
@@ -235,6 +241,7 @@ body.dark-theme {
 .contact-section h2 {
   font-size: 2.8rem;
   margin-bottom: 1.8rem;
+  font-family: 'Didot', serif;
 }
 
 .about-section p,
@@ -244,6 +251,7 @@ body.dark-theme {
   line-height: 1.8;
   margin-bottom: 2rem;
   color: #e0e0e0;
+  font-family: 'Maison Neue', serif;
 }
 
 .contact-button {
