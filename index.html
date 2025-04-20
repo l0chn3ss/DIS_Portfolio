@@ -7,7 +7,7 @@
   <title>portfolio</title>
   <!-- Importing Fonts -->
   <link rel="stylesheet" href="style/main.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Didot&family=Maison+Neue&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Didot&family=Helvetica&display=swap" />
 </head>
 
 <body class="dark-theme">
@@ -22,7 +22,7 @@
   <!-- Hero Section -->
   <header class="hero">
     <div class="bg-animation"></div>
-    <h1 class="animated-title">name</h1> 
+    <h1 class="animated-title">Anvesha Jain</h1> 
     <p class="animated-subtitle">Designer & Developer</p>
     <div class="scroll-indicator">↓</div>
   </header>
@@ -35,6 +35,7 @@
 
   <!-- Projects Section -->
   <section id="projects" class="projects">
+    <h2>Projects</h2> <!-- Added a heading for Projects -->
     <div class="project-card tilt" data-tilt-scale="1.05" data-tilt-glare="true" data-tilt-max-glare="0.5">
       <img src="assets/images/dpp_proj.png" alt="Canteen Workflow Redesign" />
       <div class="overlay"></div>
@@ -134,6 +135,30 @@
         });
     };
   </script>
+
+<script>
+    // Load the sound from the correct path
+    const hoverSound = new Audio('assets/audio/fire.mp3');
+  
+    // Select all project cards
+    const projectCards = document.querySelectorAll('.project-card');
+  
+    // Add event listener for hover effect
+    projectCards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        hoverSound.play();
+      });
+    });
+  
+    // Optional: Pause the sound if mouse leaves the project card
+    projectCards.forEach(card => {
+      card.addEventListener('mouseleave', () => {
+        hoverSound.pause();
+        hoverSound.currentTime = 0;  // Reset sound to start position
+      });
+    });
+  </script>
+  
 
 </body>
 

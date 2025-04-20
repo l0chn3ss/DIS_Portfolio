@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Didot&family=Maison+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didot&family=Helvetica&display=swap');
 
+/* General Styling */
 body.dark-theme {
   margin: 0;
   background: #0f0f0f;
   color: #f0f0f0;
-  font-family: 'Maison Neue', serif; /* Default font for content */
+  font-family: 'Helvetica', sans-serif; /* Helvetica for content */
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
+/* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
@@ -23,38 +25,44 @@ body.dark-theme {
 .hero h1 {
   font-size: 6vw;
   font-weight: bold;
-  font-family: 'Didot', serif; /* Heading font */
+  font-family: 'Didot', serif; /* Didot for headings */
 }
 
 .hero p {
   font-size: 1.5rem;
   margin-top: 1rem;
   opacity: 0.7;
-  font-family: 'Maison Neue', serif; /* Content font */
+  font-family: 'Helvetica', sans-serif; /* Helvetica for content */
 }
 
+/* Blurred Blob Animation */
 .bg-animation {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 30% 30%, #f08080, transparent 40%),
-              radial-gradient(circle at 70% 70%, #add8e6, transparent 40%),
-              radial-gradient(circle at 50% 50%, #ffffff0a, transparent 60%);
-  background-blend-mode: screen;
-  animation: floatBlobs 10s ease-in-out infinite;
-  filter: blur(100px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  background-image: radial-gradient(circle at 20% 20%, rgba(255, 0, 0, 0.5), rgba(0, 255, 255, 0.5), rgba(0, 0, 255, 0.5));
+  filter: blur(120px);
+  animation: blobMovement 10s ease-in-out infinite;
   z-index: 0;
   pointer-events: none;
 }
 
-.animated-title,
-.animated-subtitle {
+/* Blob animation to move and react to cursor */
+@keyframes blobMovement {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20%, 10%) scale(1.05); }
+  100% { transform: translate(0, 0); }
+}
+
+.hero h1, .hero p {
   z-index: 2;
   position: relative;
 }
 
+/* Title and Subtitle Animations */
 .animated-title {
   font-size: 4rem;
   font-weight: 700;
@@ -70,23 +78,17 @@ body.dark-theme {
   margin-top: 0.5rem;
   opacity: 0;
   animation: fadeInUp 1.5s ease-out forwards;
-  font-family: 'Maison Neue', serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 .scroll-indicator {
   margin-top: 4rem;
   font-size: 2rem;
   animation: bounce 1.5s infinite;
-  font-family: 'Maison Neue', serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 /* Keyframes */
-@keyframes floatBlobs {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(20%, 10%) scale(1.05); }
-  100% { transform: translate(0, 0) scale(1); }
-}
-
 @keyframes fadeInUp {
   0% { transform: translateY(20px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
@@ -164,7 +166,7 @@ body.dark-theme {
   font-family: 'Didot', serif;
 }
 
-/* Assistant avatar */
+/* Assistant Avatar */
 #assistant-container {
   position: fixed;
   bottom: 30px;
@@ -223,7 +225,7 @@ body.dark-theme {
   border-radius: 8px;
 }
 
-/* About + Contact */
+/* About + Contact Sections */
 .about-section,
 .contact-section {
   min-height: 100vh;
@@ -251,7 +253,7 @@ body.dark-theme {
   line-height: 1.8;
   margin-bottom: 2rem;
   color: #e0e0e0;
-  font-family: 'Maison Neue', serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 .contact-button {
@@ -272,7 +274,7 @@ body.dark-theme {
   transform: scale(1.05);
 }
 
-/* Nav bar */
+/* Navigation Bar */
 nav {
   position: fixed;
   top: 0;
