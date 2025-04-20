@@ -149,6 +149,7 @@ body.dark-theme {
   height: auto;
   display: block;
   border-radius: 12px;
+  opacity: 0.6;
 }
 
 .project-card .overlay {
@@ -209,8 +210,8 @@ body.dark-theme {
 }
 
 #assistant-bubble {
-  background: #ffffffcc;
-  color: #000;
+  background: #000000cc;
+  color: #ffffff;
   padding: 0.6rem 1rem;
   border-radius: 10px;
   margin-top: 10px;
