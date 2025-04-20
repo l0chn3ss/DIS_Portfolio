@@ -136,6 +136,7 @@ body.dark-theme {
   
   /* Gradient overlay */
   .project-card .overlay {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
