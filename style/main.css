@@ -1,17 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
 body.dark-theme {
     margin: 0;
     background: #0f0f0f;
     color: #f0f0f0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Serif Display', serif;
     overflow-x: hidden;
   }
   
   .hero {
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     text-align: center;
   }
   
@@ -24,6 +28,58 @@ body.dark-theme {
     font-size: 1.5rem;
     margin-top: 1rem;
     opacity: 0.7;
+  }
+
+  
+.bg-animation {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, #ff69b4, transparent 40%),
+                radial-gradient(circle at 70% 70%, #00ffff, transparent 40%),
+                radial-gradient(circle at 50% 50%, #ffffff0a, transparent 60%);
+    background-blend-mode: screen;
+    animation: floatBlobs 20s ease-in-out infinite;
+    filter: blur(100px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .animated-title,
+  .animated-subtitle {
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* Smooth fade-in and float for text */
+  .animated-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+  }
+  
+  .animated-subtitle {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+  }
+  
+  /* Keyframe animations */
+  @keyframes floatBlobs {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20%, 10%) scale(1.05); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  
+  @keyframes fadeInUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
   }
   
   .scroll-indicator {
@@ -43,7 +99,7 @@ body.dark-theme {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
   }
-  
+/*   
   .project-card {
     background: #1a1a1a;
     padding: 1rem;
@@ -56,4 +112,51 @@ body.dark-theme {
     width: 100%;
     border-radius: 8px;
   }
+   */
+
+
+/* Project card setup */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
   
+  .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+  
+  /* Gradient overlay */
+  .project-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+  }
+  
+  /* Remove gradient on hover */
+  .project-card:hover .overlay {
+    opacity: 0;
+  }
+  
+  /* Title styling */
+  .project-card h2 {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    color: white;
+    z-index: 2;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+  }
