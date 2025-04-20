@@ -93,6 +93,62 @@ body.dark-theme {
     50% { transform: translateY(10px); }
   }
   
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 100;
+  }
+  
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .main-nav li a:hover {
+    color: #ffb347;
+  }
+  
+  .nav-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .main-nav ul {
+      flex-direction: column;
+      position: absolute;
+      right: 1rem;
+      top: 3.5rem;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 1rem;
+      border-radius: 10px;
+      display: none;
+    }
+  
+    .main-nav ul.open {
+      display: flex;
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
+  }
+  
+
   /* .projects {
     padding: 5vh 10vw;
     display: grid;

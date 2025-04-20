@@ -1,10 +1,12 @@
+// audio.js
 const sound = new Howl({
-    src: ['assets/audio/ambient.mp3'],
-    volume: 0.3,
-    loop: true
+    src: ['assets/audio/fire.mp3'],
+    volume: 0.5, // Set volume (0 to 1)
+    preload: true, // Preload the audio
   });
   
-  window.addEventListener('load', () => {
+  // Function to play the audio when a project is clicked
+  function playClickSound() {
     sound.play();
-  });
+  }
   
