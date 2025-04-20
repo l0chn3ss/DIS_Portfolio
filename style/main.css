@@ -225,7 +225,7 @@ body.dark-theme {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   background-color: #111;
   color: #fff;
   text-align: center;
@@ -233,32 +233,35 @@ body.dark-theme {
 
 .about-section h2,
 .contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 1.8rem;
 }
 
 .about-section p,
 .contact-section p {
   font-size: 1.2rem;
-  max-width: 700px;
+  max-width: 750px;
   line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
 }
 
 .contact-button {
   margin-top: 2rem;
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
   background-color: #ffb347;
   color: #000;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contact-button:hover {
   background-color: #ffaa00;
+  transform: scale(1.05);
 }
 
 /* Nav bar */
@@ -269,18 +272,43 @@ nav {
   background-color: rgba(15, 15, 15, 0.95);
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.2rem;
   z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 nav a {
   color: #f0f0f0;
   text-decoration: none;
   margin: 0 1.5rem;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
   color: #ffb347;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section p,
+  .contact-section p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .contact-button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  nav {
+    padding: 1rem 0.5rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
 }
