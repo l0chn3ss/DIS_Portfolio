@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Interactive Portfolio</title>
+  <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+
+  <!-- Virtual Assistant -->
+  <div id="assistant">
+    <img src="assets/avatar/avatar.png" alt="Assistant" />
+    <div id="assistant-text">Hi! I'm here to help ✨</div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <h1>My Portfolio</h1>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#journal">Journal</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Featured Work</h2>
+    <div class="project-card tilt">
+      <h3>Project One</h3>
+      <p>Hover to tilt me!</p>
+    </div>
+  </section>
+
+  <!-- Audio Control -->
+  <button id="toggle-audio">🔊 Toggle Music</button>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ | © 2025</p>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="libs/howler.min.js"></script>
+  <script src="libs/gsap.min.js"></script>
+  <script src="libs/vanilla-tilt.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="js/tilt.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
